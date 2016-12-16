@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+
+echo '[{"id":"abc","value":134,"text":"blclclclc"}]'
