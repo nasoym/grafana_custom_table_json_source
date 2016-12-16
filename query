@@ -16,16 +16,44 @@ current_time="$(echo "$(( $(date +%s) * 1000))")"
 # ]
 # "
 
+# JSON
+# {"_id":"AVkHj_qoD5gg4vbS3Fri","_type":"log","_index":"logs-2016.12.16","@message":"Deployed website","@timestamp":[1481890593445],"tags":["deploy","website-01"],"description":"Torkel deployed website","coordinates":{"latitude":12,"longitude":121,"level":{"depth":3,"coolnes":"very"}},"long":"asdsaa asdas dasdas dasdasdas asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa asdasdasdasdasdasdas asd","unescaped-content":"breaking <br /> the <br /> row"}
+#
+# echo "[
+#   {
+#     \"columns\": [
+#     ],
+#     \"rows\": [[${current_time},\"bla\"]], 
+#     \"type\": \"table\"
+#   }
+# ]
+# "
+#
+# # echo '[{"id":"abc","value":134,"text":"blclclclc"}]'
+
+
+#
+# echo "[
+#   {
+#     \columns\: [
+#       { \text\: \JSON\, \type\:\text\ }
+#     ],
+#     \rows\: [ {\"_id\":\"AVkHj_qoD5gg4vbS3Fri\",\"_type\":\"log\",\"_index\":\"logs-2016.12.16\",\"@message\":\"Deployed website\",\"@timestamp\":[1481890593445],\"tags\":[\"deploy\",\"website-01\"],\"description\":\"Torkel deployed website\",\"coordinates\":{\"latitude\":12,\"longitude\":121,\"level\":{\"depth\":3,\"coolnes\":\"very\"}},\"long\":\"asdsaa asdas dasdas dasdasdas asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa asdasdasdasdasdasdas asd\",\"unescaped-content\":\"breaking <br /> the <br /> row\"} ], 
+#     \type\: \table\
+#   }
+# ]
+# "
+#
+
+
 echo "[
   {
     \"columns\": [
+      { \"text\": \"JSON\", \"type\":\"text\" }
     ],
-    \"rows\": [[${current_time},\"bla\"]], 
+    \"rows\": [ {\"_id\":\"AVkHj_qoD5gg4vbS3Fri\",\"_type\":\"log\",\"_index\":\"logs-2016.12.16\",\"@message\":\"Deployed website\",\"@timestamp\":[1481890593445],\"tags\":[\"deploy\",\"website-01\"],\"description\":\"Torkel deployed website\",\"coordinates\":{\"latitude\":12,\"longitude\":121,\"level\":{\"depth\":3,\"coolnes\":\"very\"}},\"long\":\"asdsaa asdas dasdas dasdasdas asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa asdasdasdasdasdasdas asd\",\"unescaped-content\":\"breaking <br /> the <br /> row\"} ], 
     \"type\": \"table\"
   }
 ]
 "
-
-# echo '[{"id":"abc","value":134,"text":"blclclclc"}]'
-
 
