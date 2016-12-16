@@ -1,3 +1,31 @@
 #!/usr/bin/env bash
 
-echo '[{"id":"abc","value":134,"text":"blclclclc"}]'
+# echo '[{"id":"abc","value":134,"text":"blclclclc"}]'
+current_time="$(echo "$(( $(date +%s) * 1000))")"
+
+
+# echo "[
+#   {
+#     \"columns\": [
+#       { \"text\": \"Time\", \"type\": \"time\", \"sort\": true, \"desc\": true },
+#       { \"text\": \"alert_name\", \"type\":\"text\" }
+#     ],
+#     \"rows\": [[${current_time},\"bla\"]], 
+#     \"type\": \"table\"
+#   }
+# ]
+# "
+
+echo "[
+  {
+    \"columns\": [
+    ],
+    \"rows\": [[${current_time},\"bla\"]], 
+    \"type\": \"table\"
+  }
+]
+"
+
+# echo '[{"id":"abc","value":134,"text":"blclclclc"}]'
+
+
